@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Little Stars Playschool</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;family=Bubblegum+Sans&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary-container": "#ffe16d",
+                "inverse-on-surface": "#f2f1e5",
+                "secondary-container": "#baeaff",
+                "surface-variant": "#e4e3d7",
+                "on-tertiary-fixed-variant": "#6b3741",
+                "on-secondary-fixed-variant": "#004d62",
+                "on-secondary": "#ffffff",
+                "on-surface": "#1b1c15",
+                "tertiary-fixed-dim": "#fcb3be",
+                "on-tertiary-container": "#6b3741",
+                "primary-fixed": "#ffe16d",
+                "secondary-fixed-dim": "#89d0ed",
+                "surface-dim": "#dbdbcf",
+                "on-surface-variant": "#474747",
+                "on-background": "#1b1c15",
+                "on-secondary-container": "#004d62",
+                "inverse-surface": "#303129",
+                "primary-fixed-dim": "#e9c400",
+                "outline-variant": "#c6c6c6",
+                "secondary-fixed": "#baeaff",
+                "on-primary-fixed": "#221b00",
+                "inverse-primary": "#e9c400",
+                "surface-bright": "#fbfaee",
+                "on-primary-container": "#544600",
+                "on-primary": "#ffffff",
+                "surface-container-high": "#e9e9dd",
+                "primary": "#705d00",
+                "surface-container-highest": "#e4e3d7",
+                "on-primary-fixed-variant": "#544600",
+                "tertiary-fixed": "#ffd9de",
+                "on-secondary-fixed": "#001f29",
+                "error": "#ba1a1a",
+                "background": "#fbfaee",
+                "surface-container-low": "#f5f4e8",
+                "on-error": "#ffffff",
+                "tertiary-container": "#ffd9de",
+                "on-tertiary-fixed": "#360c17",
+                "outline": "#777777",
+                "surface-container-lowest": "#ffffff",
+                "tertiary": "#874e58",
+                "secondary": "#0c6780",
+                "surface-container": "#efeee3",
+                "surface-tint": "#705d00",
+                "surface": "#fbfaee",
+                "on-tertiary": "#ffffff",
+                "on-error-container": "#93000a",
+                "error-container": "#ffdad6"
+              },
+              fontFamily: {
+                "headline": ["Bubblegum Sans", "Plus Jakarta Sans"],
+                "body": ["Be Vietnam Pro"],
+                "label": ["Be Vietnam Pro"]
+              },
+              borderRadius: {"DEFAULT": "1.5rem", "lg": "2.5rem", "xl": "4rem", "full": "9999px"},
+              animation: {
+                'float': 'float 6s ease-in-out infinite',
+                'wiggle': 'wiggle 1s ease-in-out infinite',
+                'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
+                'spin-slow': 'spin 8s linear infinite',
+              },
+              keyframes: {
+                float: {
+                  '0%, 100%': { transform: 'translateY(0) translateX(0)' },
+                  '50%': { transform: 'translateY(-20px) translateX(10px)' },
+                },
+                wiggle: {
+                  '0%, 100%': { transform: 'rotate(-3deg)' },
+                  '50%': { transform: 'rotate(3deg)' },
+                },
+                'bounce-slow': {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-15px)' },
+                }
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-blob {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .book-page {
+            box-shadow: 10px 0 20px -10px rgba(0,0,0,0.1), inset 5px 0 10px rgba(255,255,255,0.5);
+            border-left: 12px solid rgba(0,0,0,0.05);
+        }
+        .star-hover:hover .material-symbols-outlined {
+            animation: spin 1s linear infinite;
+        }
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 100px;
+            opacity: 0.6;
+            z-index: -1;
+        }
+        .cloud::after, .cloud::before {
+            content: '';
+            position: absolute;
+            background: white;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container overflow-x-hidden">
+<!-- Floating Background Elements -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+<div class="cloud w-32 h-10 top-[15%] left-[10%] animate-float" style="animation-delay: 0s;"></div>
+<div class="cloud w-40 h-12 top-[40%] right-[5%] animate-float" style="animation-delay: 2s;"></div>
+<div class="cloud w-24 h-8 bottom-[20%] left-[5%] animate-float" style="animation-delay: 4s;"></div>
+<span class="material-symbols-outlined absolute top-[25%] left-[80%] text-primary-container text-4xl animate-spin-slow">brightness_5</span>
+<span class="material-symbols-outlined absolute top-[70%] left-[15%] text-secondary-container text-4xl animate-bounce-slow">pets</span>
+<span class="material-symbols-outlined absolute top-[10%] right-[20%] text-tertiary-container text-4xl animate-wiggle">celebration</span>
+</div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 rounded-b-[3rem] bg-white/80 backdrop-blur-md shadow-lg">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-3xl font-black text-amber-500 italic font-headline flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl animate-bounce">auto_awesome</span>
+            Little Stars
+        </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sky-700 hover:text-amber-500 transition-all font-headline text-lg tracking-tight hover:scale-110" href="#">Home</a>
+<a class="text-amber-600 border-b-4 border-amber-400 pb-1 font-headline text-lg tracking-tight hover:scale-110" href="#">Programs</a>
+<a class="text-sky-700 hover:text-amber-500 transition-all font-headline text-lg tracking-tight hover:scale-110" href="#">Gallery</a>
+<a class="text-sky-700 hover:text-amber-500 transition-all font-headline text-lg tracking-tight hover:scale-110" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-8 py-3 rounded-full font-headline font-bold text-lg hover:scale-110 hover:rotate-2 transition-all duration-300 shadow-lg border-b-4 border-primary">
+            Enroll Now!
+        </button>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-6 md:px-12 max-w-7xl mx-auto mb-32 relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<span class="inline-block px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container font-headline font-bold text-lg mb-6 animate-wiggle shadow-sm border-2 border-white">Welcome to our Universe! 🌈</span>
+<h1 class="text-6xl md:text-7xl font-headline font-extrabold text-on-surface leading-tight tracking-tight mb-8">
+                    Where Every <span class="text-primary underline decoration-wavy decoration-secondary-container">Child</span> Shines Bright
+                </h1>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-xl font-medium">
+                    Founded in 2012, Little Stars Playschool is more than an educational institution; it’s a nurturing cocoon designed to foster curiosity, empathy, and joy.
+                </p>
+<div class="flex flex-wrap gap-6">
+<div class="p-5 bg-white rounded-2xl flex items-center gap-4 shadow-xl border-t-4 border-amber-400 star-hover transition-transform hover:-translate-y-2">
+<span class="material-symbols-outlined text-amber-500 text-4xl">child_care</span>
+<div>
+<p class="font-headline font-bold text-2xl text-on-surface">12+ Years</p>
+<p class="text-sm font-bold text-on-surface-variant">of Excellence</p>
+</div>
+</div>
+<div class="p-5 bg-white rounded-2xl flex items-center gap-4 shadow-xl border-t-4 border-sky-400 star-hover transition-transform hover:-translate-y-2">
+<span class="material-symbols-outlined text-sky-500 text-4xl">auto_awesome</span>
+<div>
+<p class="font-headline font-bold text-2xl text-on-surface">500+ Stars</p>
+<p class="text-sm font-bold text-on-surface-variant">Nurtured</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative group">
+<div class="absolute inset-0 bg-primary-container/40 organic-blob scale-110 -rotate-6 animate-float"></div>
+<div class="absolute -top-10 -right-10 w-24 h-24 bg-tertiary-container rounded-full flex items-center justify-center animate-bounce-slow z-20 shadow-lg">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container">mood</span>
+</div>
+<img alt="Happy children playing" class="relative z-10 w-full h-[500px] object-cover rounded-[3rem] shadow-2xl rotate-3 group-hover:rotate-0 transition-all duration-500 border-8 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVgKgYgBDcLsshFWee81XocEi_7eq4f1hDmW-kh46eeahCXYq0YSeiOEaxJYinhhRYJNhpjslOlRfrnpsITP6DhbnZ-yApRxmZ0XlRSTywc_TVL8EHokueTFayZY__DDWh6JSBRe4Eec8iSEPNjcNlniwB8nInbAAp4qnxllsagI8mgAdwxpKBkgGa_HqErfzIraUVvIKVESLBqStuMkqpyGa_MEVvtRaXlcWMWf92UQR0-h7KAR02X8xUs4m248HGpIwGaLiI8l78"/>
+<!-- Illustration overlay -->
+<div class="absolute -bottom-12 -left-8 z-20 animate-wiggle">
+<span class="text-8xl">🎈</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision: Picture Book Style -->
+<section class="bg-sky-50 py-32 px-6 rounded-t-[6rem] relative overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-5xl font-headline font-extrabold text-sky-900">Our Storybook</h2>
+<div class="flex justify-center gap-2 mt-4">
+<div class="w-3 h-3 rounded-full bg-amber-400"></div>
+<div class="w-3 h-3 rounded-full bg-sky-400"></div>
+<div class="w-3 h-3 rounded-full bg-rose-400"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 shadow-2xl rounded-[3rem] overflow-hidden">
+<div class="bg-secondary-container/20 p-16 book-page flex flex-col items-center text-center relative group">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-10 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-5xl animate-wiggle">rocket_launch</span>
+</div>
+<h2 class="text-4xl font-headline font-extrabold text-sky-900 mb-8">Our Mission</h2>
+<p class="text-sky-950/80 text-xl leading-relaxed font-medium italic">
+                        "To provide a safe, playful, and stimulating environment that empowers children to explore their unique talents through discovery-led experiences."
+                    </p>
+<span class="absolute bottom-8 right-8 text-6xl opacity-20 pointer-events-none">🎨</span>
+</div>
+<div class="bg-tertiary-container/20 p-16 book-page flex flex-col items-center text-center relative group border-l-0">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-10 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-5xl animate-wiggle">visibility</span>
+</div>
+<h2 class="text-4xl font-headline font-extrabold text-rose-900 mb-8">Our Vision</h2>
+<p class="text-rose-950/80 text-xl leading-relaxed font-medium italic">
+                        "To be the leading beacon of early childhood education, where we shape compassionate global citizens who approach the world with kindness and inquiry."
+                    </p>
+<span class="absolute bottom-8 left-8 text-6xl opacity-20 pointer-events-none">🧸</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Founder's Message -->
+<section class="py-32 px-6 max-w-7xl mx-auto">
+<div class="bg-white rounded-[4rem] p-12 md:p-20 flex flex-col lg:flex-row gap-20 items-center shadow-xl border-4 border-dashed border-primary-container relative">
+<div class="absolute -top-8 -left-8 text-6xl animate-bounce">✨</div>
+<div class="w-full lg:w-2/5">
+<div class="relative">
+<div class="absolute inset-0 bg-primary-container organic-blob translate-x-4 translate-y-4 -z-10"></div>
+<img alt="Founder Portrait" class="w-full aspect-square object-cover rounded-[3rem] border-8 border-white shadow-lg rotate-[-2deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Ksc3BEBEf8Ai9DDk4lIlZ5ZfN1ORpmglegKP1BaIyGf7F9A6snCQ_hw3DrDOmfjwdKX20c7Za90RrGe1b7vVOuLmTze02RKv3MaYGUpzraVspevElyfIFG97jEQPtBDncqPoWMXWxBST9TuSWqoDNo9a6own90K3g2D2QIJTKvEA-OM7Ff0xAxkfdEYe2gCEMtQwfx8eKE_08dpICFwGajeksuwXIR5HzcBFzCERCPZJBMsiETJ0F7ZOAaWvov3acFHUWyzE94pp"/>
+</div>
+</div>
+<div class="w-full lg:w-3/5">
+<span class="material-symbols-outlined text-primary text-8xl opacity-10 mb-4 block" data-weight="fill">format_quote</span>
+<h3 class="text-4xl font-headline font-bold mb-8 text-on-surface">A Note from Mrs. Sarah</h3>
+<p class="text-2xl italic text-on-surface-variant mb-10 leading-relaxed font-medium">
+                    "At Little Stars, we don't just teach; we inspire. Every child who walks through our doors is a unique constellation of potential. Our role is simply to provide the sky for them to shine in."
+                </p>
+<div class="border-t-4 border-primary-container/30 pt-8 flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center font-headline text-3xl text-on-primary-container">SJ</div>
+<div>
+<p class="text-3xl font-headline font-extrabold text-on-surface">Mrs. Sarah Jenkins</p>
+<p class="text-secondary font-bold text-lg">Founder &amp; Educational Director</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Teaching Philosophy -->
+<section class="py-32 px-6 bg-amber-50 relative overflow-hidden">
+<div class="absolute -bottom-20 -right-20 opacity-10">
+<span class="material-symbols-outlined text-[300px] text-primary" data-weight="fill">draw</span>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="text-center mb-24">
+<h2 class="text-5xl md:text-6xl font-headline font-extrabold mb-6">How We Learn &amp; Play</h2>
+<p class="text-xl text-on-surface-variant max-w-2xl mx-auto font-medium">We believe in big smiles and curious minds! Here's our recipe for a happy day:</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Point 1 -->
+<div class="bg-white p-10 rounded-[3rem] flex flex-col items-center text-center gap-6 shadow-xl hover:-translate-y-4 transition-all duration-500 star-hover border-b-8 border-primary-container">
+<div class="w-20 h-20 bg-primary-container/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">extension</span>
+</div>
+<h4 class="text-2xl font-headline font-bold">Play-Based Learning</h4>
+<p class="text-on-surface-variant leading-relaxed font-medium">We believe play is the highest form of research! Every game is a lesson in disguise.</p>
+</div>
+<!-- Point 2 -->
+<div class="bg-white p-10 rounded-[3rem] flex flex-col items-center text-center gap-6 shadow-xl hover:-translate-y-4 transition-all duration-500 star-hover border-b-8 border-secondary-container">
+<div class="w-20 h-20 bg-secondary-container/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl">favorite</span>
+</div>
+<h4 class="text-2xl font-headline font-bold">Big Feelings</h4>
+<p class="text-on-surface-variant leading-relaxed font-medium">Learning to share, care, and make friends is just as important as ABCs and 123s.</p>
+</div>
+<!-- Point 3 -->
+<div class="bg-white p-10 rounded-[3rem] flex flex-col items-center text-center gap-6 shadow-xl hover:-translate-y-4 transition-all duration-500 star-hover border-b-8 border-tertiary-container">
+<div class="w-20 h-20 bg-tertiary-container/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-4xl">palette</span>
+</div>
+<h4 class="text-2xl font-headline font-bold">Creative Arts</h4>
+<p class="text-on-surface-variant leading-relaxed font-medium">Finger painting, messy play, and loud singing are the best parts of our busy days!</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Meet our Team Section -->
+<section class="py-32 px-6 max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<span class="text-tertiary font-headline font-bold tracking-widest uppercase text-lg">The Super-Grownups</span>
+<h2 class="text-5xl md:text-6xl font-headline font-extrabold mt-4 mb-8">Meet Our Team</h2>
+<div class="flex justify-center gap-2">
+<span class="text-4xl animate-bounce">🌟</span>
+<span class="text-4xl animate-bounce" style="animation-delay: 0.2s">⭐</span>
+<span class="text-4xl animate-bounce" style="animation-delay: 0.4s">🌟</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
+<!-- Staff 1 -->
+<div class="text-center group">
+<div class="relative mb-8 flex justify-center">
+<div class="absolute inset-0 bg-sky-200 organic-blob scale-110 group-hover:rotate-45 transition-transform duration-700"></div>
+<div class="w-56 h-56 rounded-full overflow-hidden border-8 border-white shadow-2xl relative z-10 animate-bounce-slow">
+<img alt="Teacher Anna" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiWp-3672VjPB54XYqUXyihpo1GV3xqzh8SskNmv1JdhhmMxgpGTj9fKLTHv3TsLB8ZPNFhXGjJRtChjNxJtUJ_YuANXX6twboDBVQ-7K0ge_QvWfHUNCCvsxkx1BE1u3mNScJcckYN4hHpv8LqIV7Xe-yXAEgVqqiiX5Q1xQkSoKDhzfXvw3JWSby1UwHUAuktYIjHz6NJcEogDKDbznFzPBUOIltisC7ZBd6GZfJdElvU3kKhphiTwSSk5znEv8qDMDdrGnIt66w"/>
+</div>
+</div>
+<h5 class="text-2xl font-headline font-bold">Ms. Anna Rivera</h5>
+<p class="text-secondary font-bold text-lg">Head Educator</p>
+</div>
+<!-- Staff 2 -->
+<div class="text-center group">
+<div class="relative mb-8 flex justify-center">
+<div class="absolute inset-0 bg-amber-200 organic-blob scale-110 group-hover:-rotate-45 transition-transform duration-700"></div>
+<div class="w-56 h-56 rounded-full overflow-hidden border-8 border-white shadow-2xl relative z-10 animate-bounce-slow" style="animation-delay: 0.5s;">
+<img alt="Teacher David" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-5-I6zPOLSBfoCklQV4MHQAWaJm1fPIh-4DcivSJ1-9BCA4mNYeXh9l6PirZQ77a1JFt0MAuF-AGlMZBVykaNNiDFTf9mcrNrOUEydW_c7jJqPdTzSYTtluhLgpwNnKkwnOID3U5vEs6CZpCLE7aZ0OudrGNSZ0iFIlaASMH2hAIy-a6RRkp6Y8F4fZXqbr_1gpZ4IfTZPO5JWQohkUjAJJEagH12KesgT1PQv10tNoAruOwRp0rOj19SsXoJ5uMhZ2_0140Uiaix"/>
+</div>
+</div>
+<h5 class="text-2xl font-headline font-bold">Mr. David Chen</h5>
+<p class="text-secondary font-bold text-lg">Music Specialist</p>
+</div>
+<!-- Staff 3 -->
+<div class="text-center group">
+<div class="relative mb-8 flex justify-center">
+<div class="absolute inset-0 bg-rose-200 organic-blob scale-110 group-hover:rotate-90 transition-transform duration-700"></div>
+<div class="w-56 h-56 rounded-full overflow-hidden border-8 border-white shadow-2xl relative z-10 animate-bounce-slow" style="animation-delay: 1s;">
+<img alt="Teacher Elena" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMrdlhxs5WYp2Yx8OYVf8hXWDZ51VuGrOalW2ObCDJR-lXd_sIbfYgv9AOwJ_NGnqeUug4gOnDEu7jEHdzQEsSRlbfemaXbI9H7YYYe2CcV2DNXl_R_KIS6E1O6d3WnSMQ8sKH8NtxtyzlsBSnweoQ1wB3C2916QnFwXGBWG8BEON6ofG5FmklItrGH1b3iyxQXFwbeBnHWqVUMZgp8js5DtgtB8MIi-B58PBmtDbyQbk4v32TUA9rluT0j9q7X8ArlK6wa_WzQPOm"/>
+</div>
+</div>
+<h5 class="text-2xl font-headline font-bold">Ms. Elena Petrova</h5>
+<p class="text-secondary font-bold text-lg">Arts &amp; Crafts</p>
+</div>
+<!-- Staff 4 -->
+<div class="text-center group">
+<div class="relative mb-8 flex justify-center">
+<div class="absolute inset-0 bg-emerald-200 organic-blob scale-110 group-hover:-rotate-90 transition-transform duration-700"></div>
+<div class="w-56 h-56 rounded-full overflow-hidden border-8 border-white shadow-2xl relative z-10 animate-bounce-slow" style="animation-delay: 1.5s;">
+<img alt="Teacher Sophie" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWd4cAc0-HVLbhS5kD356m-_ixQ7gI6_UKYQiXRz3GZF0SFQok-kbSC8iZfF-d5-GuiHer_5E_9iHijQAQfnNwParp1UJicWavFli1oNIO81M2-VcoDqLg5gwRsayT_fqAXgR55Ca8dPo6aU8TbnNHWntWgip8KgDgaqjr5Br4Yute-bcS1n8X9qAlvPy-I3BwWzf0Tl8IMpLRSEYfPvgh4-d15GBGo80WBmV0FlxXvxcQxCeH-lSabJ6rpKt8-NvKLinZto8NHeEH"/>
+</div>
+</div>
+<h5 class="text-2xl font-headline font-bold">Ms. Sophie Bell</h5>
+<p class="text-secondary font-bold text-lg">Toddler Lead</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 mb-32 relative">
+<div class="max-w-5xl mx-auto bg-primary text-on-primary rounded-[4rem] p-16 text-center relative overflow-hidden shadow-2xl">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-white/20 rounded-full blur-3xl animate-float"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-amber-400/30 rounded-full blur-2xl animate-pulse"></div>
+<h2 class="text-5xl font-headline font-extrabold mb-8 relative z-10 leading-tight">Ready to join our big family?</h2>
+<p class="text-on-primary/90 text-2xl mb-12 max-w-2xl mx-auto relative z-10 font-medium">We are now accepting enrollments! Limited spots for more little stars to shine with us.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
+<button class="bg-white text-primary px-12 py-5 rounded-full font-headline font-extrabold text-xl hover:scale-110 hover:-rotate-2 transition-all shadow-xl border-b-8 border-stone-200">
+                    Book a Fun Tour 🚌
+                </button>
+<button class="bg-primary-container text-on-primary-container px-12 py-5 rounded-full font-headline font-extrabold text-xl hover:scale-110 hover:rotate-2 transition-all border-b-8 border-primary shadow-xl">
+                    Get Free Brochure 📂
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[6rem] mt-20 bg-stone-100 relative pt-10">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 flex gap-4">
+<span class="text-6xl animate-bounce">🎈</span>
+<span class="text-6xl animate-bounce" style="animation-delay: 0.3s">🎈</span>
+<span class="text-6xl animate-bounce" style="animation-delay: 0.1s">🎈</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-10 py-20 max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="text-3xl font-black text-amber-500 font-headline italic flex items-center gap-2">
+                Little Stars
+            </div>
+<p class="text-stone-600 font-body text-lg font-medium">Nurturing bright minds and kind hearts through the power of play since 2012.</p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all shadow-md" href="#"><span class="material-symbols-outlined text-stone-600 text-2xl">social_leaderboard</span></a>
+<a class="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all shadow-md" href="#"><span class="material-symbols-outlined text-stone-600 text-2xl">photo_camera</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-sky-800 font-headline font-bold mb-8 uppercase text-lg tracking-widest">Explore</h4>
+<ul class="flex flex-col gap-5 text-lg font-medium">
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-2 transition-all flex items-center gap-2" href="#">Home 🏠</a></li>
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-2 transition-all flex items-center gap-2" href="#">About Us 👋</a></li>
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-2 transition-all flex items-center gap-2" href="#">Curriculum 📚</a></li>
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-2 transition-all flex items-center gap-2" href="#">Daycare 🧸</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sky-800 font-headline font-bold mb-8 uppercase text-lg tracking-widest">Fun Stuff</h4>
+<ul class="flex flex-col gap-5 text-lg font-medium">
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-2 transition-all flex items-center gap-2" href="#">Summer Camp 🏕️</a></li>
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-2 transition-all flex items-center gap-2" href="#">Toddler Class 🍼</a></li>
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-2 transition-all flex items-center gap-2" href="#">Preschool 🎒</a></li>
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-2 transition-all flex items-center gap-2" href="#">Facilities 🎡</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sky-800 font-headline font-bold mb-8 uppercase text-lg tracking-widest">Say Hello</h4>
+<ul class="flex flex-col gap-5 text-lg font-medium">
+<li class="flex items-start gap-4 text-stone-600">
+<span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+                    123 Sunshine Lane, Playcity
+                </li>
+<li class="flex items-center gap-4 text-stone-600">
+<span class="material-symbols-outlined text-primary text-2xl">phone</span>
+                    +1 (234) 567-890
+                </li>
+<li class="flex items-center gap-4 text-stone-600">
+<span class="material-symbols-outlined text-primary text-2xl">mail</span>
+                    hello@littlestars.edu
+                </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-stone-200 py-10 px-10 text-center">
+<p class="text-stone-500 text-base font-medium">© 2024 Little Stars Playschool. Made with ❤️ and ✨.</p>
+</div>
+</footer>
+<script>
+    // Simple script to add a wiggle on click to team photos for extra playfulness
+    document.querySelectorAll('.animate-bounce-slow').forEach(el => {
+        el.addEventListener('click', () => {
+            el.classList.add('animate-spin');
+            setTimeout(() => el.classList.remove('animate-spin'), 1000);
+        });
+    });
+</script>
+</body></html>

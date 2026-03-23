@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Summer Camp | Little Stars Playschool</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#ffe16d",
+              "inverse-on-surface": "#f2f1e5",
+              "secondary-container": "#baeaff",
+              "surface-variant": "#e4e3d7",
+              "on-tertiary-fixed-variant": "#6b3741",
+              "on-secondary-fixed-variant": "#004d62",
+              "on-secondary": "#ffffff",
+              "on-surface": "#1b1c15",
+              "tertiary-fixed-dim": "#fcb3be",
+              "on-tertiary-container": "#6b3741",
+              "primary-fixed": "#ffe16d",
+              "secondary-fixed-dim": "#89d0ed",
+              "surface-dim": "#dbdbcf",
+              "on-surface-variant": "#474747",
+              "on-background": "#1b1c15",
+              "on-secondary-container": "#004d62",
+              "inverse-surface": "#303129",
+              "primary-fixed-dim": "#e9c400",
+              "outline-variant": "#c6c6c6",
+              "secondary-fixed": "#baeaff",
+              "on-primary-fixed": "#221b00",
+              "inverse-primary": "#e9c400",
+              "surface-bright": "#fbfaee",
+              "on-primary-container": "#544600",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e9e9dd",
+              "primary": "#705d00",
+              "surface-container-highest": "#e4e3d7",
+              "on-primary-fixed-variant": "#544600",
+              "tertiary-fixed": "#ffd9de",
+              "on-secondary-fixed": "#001f29",
+              "error": "#ba1a1a",
+              "background": "#fbfaee",
+              "surface-container-low": "#f5f4e8",
+              "on-error": "#ffffff",
+              "tertiary-container": "#ffd9de",
+              "on-tertiary-fixed": "#360c17",
+              "outline": "#777777",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#874e58",
+              "secondary": "#0c6780",
+              "surface-container": "#efeee3",
+              "surface-tint": "#705d00",
+              "surface": "#fbfaee",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'rotate-slow': 'rotate 10s linear infinite',
+              'pop': 'pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              rotate: {
+                'from': { transform: 'rotate(0deg)' },
+                'to': { transform: 'rotate(360deg)' },
+              },
+              pop: {
+                '0%': { transform: 'scale(1)' },
+                '100%': { transform: 'scale(1.05)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .asymmetric-cloud {
+            clip-path: ellipse(70% 50% at 50% 50%);
+        }
+        .jiggle:hover {
+            animation: wiggle 0.5s ease-in-out infinite;
+        }
+        .blob {
+            border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 rounded-b-[3rem] bg-white/90 backdrop-blur-md shadow-[0_20px_40px_rgba(112,93,0,0.08)] border-b-4 border-primary-container">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-3xl font-black text-amber-600 italic font-headline flex items-center gap-2 group">
+<span class="material-symbols-outlined text-primary group-hover:animate-bounce" data-icon="auto_awesome">auto_awesome</span>
+            Little Stars
+        </div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center space-x-8 font-headline font-bold tracking-tight">
+<a class="text-sky-700 hover:text-rose-500 transition-colors hover:scale-110 duration-300 jiggle" href="#">Home</a>
+<a class="text-sky-700 hover:text-rose-500 transition-colors hover:scale-110 duration-300 jiggle" href="#">Programs</a>
+<a class="text-sky-700 hover:text-rose-500 transition-colors hover:scale-110 duration-300 jiggle" href="#">Gallery</a>
+<a class="text-amber-600 border-b-4 border-amber-400 pb-1 flex items-center gap-1" href="#">
+                Summer Camp
+                <span class="material-symbols-outlined text-xs animate-pulse">sunny</span>
+</a>
+<a class="text-sky-700 hover:text-rose-500 transition-colors hover:scale-110 duration-300 jiggle" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container font-headline font-bold px-8 py-3 rounded-full hover:scale-110 active:scale-95 transition-all duration-300 shadow-[0_8px_0_rgb(180,150,0)] hover:shadow-[0_4px_0_rgb(180,150,0)] hover:translate-y-1">
+            Enroll Now
+        </button>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section: The Tactile Cloudscape -->
+<section class="relative overflow-hidden px-8 pb-24 pt-10">
+<!-- Floating Illustrations -->
+<div class="absolute top-20 left-10 animate-float opacity-40 select-none pointer-events-none hidden lg:block">
+<span class="material-symbols-outlined text-sky-400 text-8xl" data-icon="cloud">cloud</span>
+</div>
+<div class="absolute bottom-20 right-20 animate-bounce-slow opacity-30 select-none pointer-events-none hidden lg:block">
+<span class="material-symbols-outlined text-rose-400 text-6xl" data-icon="rocket">rocket</span>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="relative z-10 space-y-8">
+<div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary-container text-on-secondary-container font-headline font-bold text-sm border-2 border-sky-400 animate-pulse">
+<span class="material-symbols-outlined text-lg animate-spin-slow" data-icon="sunny" style="animation-duration: 4s">sunny</span>
+                    REGISTRATION OPEN FOR 2024!
+                </div>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold text-on-surface tracking-tight leading-[1] relative">
+                    Sunshine, <br/>
+<span class="text-secondary italic underline decoration-wavy decoration-primary-container">Learning</span> <br/> 
+                    &amp; Pure <span class="text-rose-500 relative">Joy
+                        <span class="absolute -top-6 -right-10 material-symbols-outlined text-primary text-4xl animate-wiggle" data-icon="celebration">celebration</span>
+</span>
+</h1>
+<p class="text-2xl text-on-surface-variant max-w-lg leading-relaxed font-medium">
+                    Ignite your child's curiosity this summer with our award-winning programs designed for exploration, creativity, and messy fun!
+                </p>
+<div class="flex flex-wrap gap-6 pt-4">
+<button class="bg-primary-container text-on-primary-container font-headline font-bold px-12 py-6 rounded-full hover:scale-110 transition-transform duration-300 text-xl shadow-[0_12px_0_rgb(180,150,0)] flex items-center gap-3">
+                        Join the Adventure
+                        <span class="material-symbols-outlined text-2xl animate-bounce" data-icon="rocket_launch">rocket_launch</span>
+</button>
+<button class="bg-white border-4 border-secondary-container text-on-surface font-headline font-bold px-10 py-6 rounded-full hover:scale-105 transition-transform duration-300 text-xl hover:bg-secondary-container/20">
+                        View Schedule
+                    </button>
+</div>
+</div>
+<div class="relative">
+<!-- Decorative background clouds/blobs -->
+<div class="absolute -top-10 -right-10 w-96 h-96 bg-secondary-container blob opacity-40 -z-10 animate-float"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-tertiary-container blob opacity-40 -z-10 animate-float" style="animation-delay: -3s"></div>
+<div class="relative p-4 bg-white rounded-[4rem] shadow-[0_30px_60px_rgba(0,0,0,0.1)] border-8 border-primary-container transform rotate-3 hover:rotate-0 transition-transform duration-500">
+<img alt="Happy children playing outside" class="w-full h-[550px] object-cover rounded-[3rem]" data-alt="Group of diverse children laughing in a sunny park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQgjZMxcBUulK5DTPrxObhc_JrlK5CpgvYXhgYJeEaXCcIJ4R9ldK_Fv1cnou7Wap0TOQ0SIuO36j5jznAOADtmE1nQnx-96gEeZu8Ud2r_GpD4qAdGa_0MzjcU_LdUabk1KYGycvzt7trGxjZP1sfMfLgluvOCG7MfRyQc9Vt7IzwjCwz_jidXfQcdhyYLa3Eh1NX4EZZtmaIKWSHgvlvgM3hJgmOV8n7fX-YlMDqd_VsFx30qGSbJi3GMcPA_jEZ7nuI1aV7fuq"/>
+</div>
+<!-- Floating Star Decoration -->
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-400 rounded-full flex items-center justify-center shadow-xl transform animate-rotate-slow">
+<span class="material-symbols-outlined text-6xl text-white" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<!-- Cute Mascot Placeholder (Using Icon) -->
+<div class="absolute -bottom-8 -right-8 w-24 h-24 bg-rose-400 rounded-2xl flex items-center justify-center shadow-lg animate-wiggle transform rotate-12 border-4 border-white">
+<span class="material-symbols-outlined text-5xl text-white" data-icon="pets">pets</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Program Highlights Bento Grid -->
+<section class="py-24 px-8 bg-sky-50 rounded-[6rem] mx-4 border-y-8 border-secondary-container relative overflow-hidden">
+<!-- Background Elements -->
+<div class="absolute top-10 left-10 text-sky-200 select-none pointer-events-none rotate-12">
+<span class="material-symbols-outlined text-[10rem]" data-icon="bubble_chart">bubble_chart</span>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="text-center mb-20 space-y-6">
+<div class="inline-block animate-bounce-slow">
+<span class="material-symbols-outlined text-primary text-6xl" data-icon="temp_preferences_custom">temp_preferences_custom</span>
+</div>
+<h2 class="text-5xl md:text-7xl font-headline font-extrabold text-on-surface">Summer Magic Awaits!</h2>
+<p class="text-2xl text-on-surface-variant max-w-2xl mx-auto font-medium">From sensory play to scientific discovery, our curriculum is built around the pure wonder of childhood.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tall Card -->
+<div class="md:row-span-2 bg-white p-10 rounded-[3rem] shadow-xl border-4 border-rose-100 flex flex-col justify-between hover:scale-[1.03] transition-all duration-300 group">
+<div>
+<div class="w-20 h-20 bg-rose-400 rounded-3xl flex items-center justify-center mb-8 shadow-lg group-hover:animate-wiggle">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="menu_book">menu_book</span>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-6 text-rose-500">Summer Learning</h3>
+<p class="text-xl text-on-surface-variant leading-relaxed">We bridge the summer gap with engaging literacy and math workshops hidden inside playful, giggle-filled activities.</p>
+</div>
+<div class="mt-10 rounded-[2rem] overflow-hidden border-4 border-rose-50 shadow-inner">
+<img class="w-full h-56 object-cover" data-alt="Child solving a colorful educational puzzle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1xOCQ1MigdLkTDq8Sa4I4fW6TtN6EyCf66qFn6yN3CD8wRZ_0BNLA9CI2ouLhlDmrVHD1HTXudagbQQ1f-ljdk9JxnYv4lDv7DK-kW8jpD7LDeEXyGG3DNLSlQs8R3WOUDo5LRLx_PcRYZdEGAXaeuQr1-sgGRFRhVnH4YGwls--KkPYKQA_5fIxGP7nrMLvA-YjeoIZrCMB8SvF7ImxZfKGbvlFNyk9UYvsltRn26Mr4uQBQaioh_9ZvrrzlK_wEeLt3I5xLZApW"/>
+</div>
+</div>
+<!-- Wide Card -->
+<div class="md:col-span-2 bg-white p-10 rounded-[3rem] shadow-xl border-4 border-primary-container flex flex-col md:flex-row gap-8 items-center hover:scale-[1.03] transition-all duration-300 group">
+<div class="flex-1">
+<div class="w-16 h-16 bg-primary-container rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:animate-bounce">
+<span class="material-symbols-outlined text-on-primary-container text-3xl" data-icon="palette">palette</span>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-4 text-primary">Creative Arts Hub</h3>
+<p class="text-xl text-on-surface-variant mb-8 leading-relaxed">Unleash the inner Picasso! Our daily workshops cover pottery, finger painting, and rhythmic music.</p>
+<button class="text-primary font-black text-lg flex items-center gap-3 group/btn hover:translate-x-3 transition-transform">
+                            EXPLORE ART CLASS <span class="material-symbols-outlined bg-primary-container p-2 rounded-full group-hover/btn:animate-ping" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="flex-1 w-full h-full min-h-[250px] bg-tertiary-container rounded-[2rem] overflow-hidden border-4 border-white shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Children painting together on a large canvas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHh90d4qZvVkJHV5GlhqOKf0S7uImGRL-GNdw7K7KDu5KTL85ra78yVgOriych4FetD2uixCKDFj78vrICK5SravpT1QclT-5RD2tbhg4sra6cPB5GaDo08vboVy4o2_01lnNHJwPSLOT9K6B2tfwf_s1LN6XzcdXJTYSQxnpEJBlFNCtiRSnf6Ir0cw9TiPSvDuvkcWYCsB63XgQRAJ_o3wg78eEpwadfEexTgqdQmlNU8oKxBD7r8s6H5tuRxDg4FUoIRjnvjqIU"/>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="bg-white p-8 rounded-[3rem] shadow-xl border-4 border-sky-200 hover:scale-[1.03] transition-all duration-300 group">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mb-6 shadow-md group-hover:animate-spin-slow">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="sports_soccer">sports_soccer</span>
+</div>
+<h4 class="text-2xl font-headline font-bold mb-3 text-secondary">Outdoor Games</h4>
+<p class="text-on-surface-variant font-medium">Classic summer games that build teamwork and coordination!</p>
+</div>
+<!-- Small Card 2 -->
+<div class="bg-white p-8 rounded-[3rem] shadow-xl border-4 border-amber-200 hover:scale-[1.03] transition-all duration-300 group">
+<div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 shadow-md group-hover:animate-bounce">
+<span class="material-symbols-outlined text-amber-600 text-3xl" data-icon="eco">eco</span>
+</div>
+<h4 class="text-2xl font-headline font-bold mb-3 text-amber-700">Nature Explorers</h4>
+<p class="text-on-surface-variant font-medium">Our garden space where little ones learn about seeds and bugs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Workshop Cards Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto relative">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-rose-500 animate-wiggle" data-icon="auto_fix_high">auto_fix_high</span>
+<span class="font-headline font-black text-rose-500 tracking-widest uppercase">Weekly Themes</span>
+</div>
+<h2 class="text-5xl font-headline font-extrabold text-on-surface leading-tight">Hand-Crafted Adventures</h2>
+<p class="text-2xl text-on-surface-variant mt-4 font-medium">Every week features a new magical theme for our little stars!</p>
+</div>
+<div class="flex gap-4">
+<button class="w-16 h-16 rounded-full bg-white border-4 border-stone-200 flex items-center justify-center text-on-surface-variant hover:border-primary-container hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md group">
+<span class="material-symbols-outlined text-3xl group-hover:-translate-x-1 transition-transform" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-16 h-16 rounded-full bg-white border-4 border-stone-200 flex items-center justify-center text-on-surface-variant hover:border-primary-container hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md group">
+<span class="material-symbols-outlined text-3xl group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Card 1: Creative Crafts -->
+<div class="group relative bg-white rounded-[3rem] p-8 shadow-xl border-b-8 border-rose-400 hover:translate-y-[-16px] transition-all duration-500">
+<div class="mb-8 overflow-hidden rounded-[2rem] h-48 border-4 border-rose-50 relative">
+<img class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700" data-alt="Colorful crafting supplies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGT4Sm4nqe5Q2lBdgwznslF_YNcxeg0BdamTSptk3O1RQpQkuOXfZNH_3txrN-Qwc-w8Y2QvwMydU-GOVyMraCyuk8GLDWJxUC3yYlfDrR0bbG4-uOYGSqi1_7wWusBqcZJFTIg7EoOBGov0lxWEHR6rWLtZKJ6LfkPK3PoIZqXIpa1qQArmhJrUsUHnTe5sb9QhB5kfGxqdtzqGVkP2LCtUHSIrxoMFQ6hD2EmB1Md_sLOYVXMMp2QOi2uzExLj7cWE4I3iJhG1ae"/>
+<div class="absolute inset-0 bg-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h3 class="text-2xl font-headline font-bold text-rose-500 mb-3">Creative Crafts</h3>
+<p class="text-on-surface-variant mb-8 font-medium">Messy art, clay sculpting, and fun DIY projects!</p>
+<div class="pt-6 border-t-2 border-dashed border-rose-100 flex justify-between items-center">
+<span class="px-4 py-1 bg-rose-100 text-rose-600 rounded-full text-sm font-bold">AGES 4-7</span>
+<span class="material-symbols-outlined text-rose-500 group-hover:animate-bounce" data-icon="palette">palette</span>
+</div>
+</div>
+<!-- Card 2: Nature Walks -->
+<div class="group relative bg-white rounded-[3rem] p-8 shadow-xl border-b-8 border-sky-400 hover:translate-y-[-16px] transition-all duration-500">
+<div class="mb-8 overflow-hidden rounded-[2rem] h-48 border-4 border-sky-50">
+<img class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700" data-alt="Forest sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9SyHEPL4a4qRyQFqu_vx0hcGJAqti4Me-UiTmBdKtlF5Ob9jau2pLl_aw7pXFPC0DPenU5oaQ6F8xrZob2d9R0MUXBkQvAF0sEHnxtIo8Z3uTXRwzjCy8v_ne5IdB3TQpkBDzJtYLhPT-jXWliJi-86Van6n6bgTFbNh-sq2WLi3ebxG03-d4BvHMBe60d7i3USMAfR3vNVt9nUAxDdyeoLFv01cHFLgxPdtuGbvDtaT667wfNsRMLoWqXd6k5zhLihVTKF10pZK2"/>
+</div>
+<h3 class="text-2xl font-headline font-bold text-sky-500 mb-3">Nature Walks</h3>
+<p class="text-on-surface-variant mb-8 font-medium">Guided exploration of local parks and bird watching.</p>
+<div class="pt-6 border-t-2 border-dashed border-sky-100 flex justify-between items-center">
+<span class="px-4 py-1 bg-sky-100 text-sky-600 rounded-full text-sm font-bold">AGES 3-6</span>
+<span class="material-symbols-outlined text-sky-500 group-hover:animate-bounce" data-icon="hiking">hiking</span>
+</div>
+</div>
+<!-- Card 3: Science Fun -->
+<div class="group relative bg-white rounded-[3rem] p-8 shadow-xl border-b-8 border-primary-container hover:translate-y-[-16px] transition-all duration-500 lg:translate-y-6">
+<div class="mb-8 overflow-hidden rounded-[2rem] h-48 border-4 border-amber-50">
+<img class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700" data-alt="Science experiments" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc0eT4sdeNbrOhB3aV4jbAZsIwGibzTngtqc25pp19A3b4sT6gvDflXmVFnAficFaJZJU-Q4Ft0VeMxp2Zpm4FTXnRA1QXrnYccIiAdQcmhdxye3VX3J-zXxvARK4iVD16-Mz5O8Eq-Gf9xurxBw8ae1MSOg8kpGOuCbi0viq91s8VIQqZ4m8YB1d7VPTTwOxzBV-OYsVVC6pL5hLIPJ6sNBvclBXHUlODGhcDSpXxMH6Ke_0plbdiD-Vi4IocqJcJ1NoF1kfT5-jC"/>
+</div>
+<h3 class="text-2xl font-headline font-bold text-amber-600 mb-3">Science Magic</h3>
+<p class="text-on-surface-variant mb-8 font-medium">Safe, hands-on experiments that spark big "WOW"s!</p>
+<div class="pt-6 border-t-2 border-dashed border-amber-100 flex justify-between items-center">
+<span class="px-4 py-1 bg-amber-100 text-amber-600 rounded-full text-sm font-bold">AGES 5-8</span>
+<span class="material-symbols-outlined text-amber-500 group-hover:animate-bounce" data-icon="science">science</span>
+</div>
+</div>
+<!-- Card 4: Team Sports -->
+<div class="group relative bg-white rounded-[3rem] p-8 shadow-xl border-b-8 border-tertiary-container hover:translate-y-[-16px] transition-all duration-500 lg:translate-y-12">
+<div class="mb-8 overflow-hidden rounded-[2rem] h-48 border-4 border-stone-50">
+<img class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700" data-alt="Children high-fiving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEXJEFcs_PGxOwZSvv4BY_3oIToSQe0kIilM0oL4sGBQWvenWzEemwlkgsA0DQjtWtvtdXM97853vzyvINBamA5Is_nV3Lw3pXnp0ZIujNYRhROUwtqINHZBqb_7q8y3mjm-GrKPS407gsPNUdFFQhITLryNWnqGiZbFf15KkeUjESRvmPoylAto5gizf__4UzLjdp1hOPsHEgR583fmSPcW4UiKMF8WGTXQ-NPB15dtQRTLI_0PQxwGL1MdvJHbvdPTQBN0c15gut"/>
+</div>
+<h3 class="text-2xl font-headline font-bold text-tertiary mb-3">Team Sports</h3>
+<p class="text-on-surface-variant mb-8 font-medium">Fun mini-leagues for soccer, tag, and obstacle courses.</p>
+<div class="pt-6 border-t-2 border-dashed border-stone-100 flex justify-between items-center">
+<span class="px-4 py-1 bg-stone-100 text-stone-600 rounded-full text-sm font-bold">AGES 4-8</span>
+<span class="material-symbols-outlined text-tertiary group-hover:animate-bounce" data-icon="groups">groups</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section: The Big Adventure -->
+<section class="mt-40 mb-20 px-8">
+<div class="max-w-6xl mx-auto bg-primary-container rounded-[5rem] p-12 md:p-24 text-center relative overflow-hidden shadow-[0_40px_80px_rgba(112,93,0,0.15)] border-[12px] border-white">
+<!-- Decorative child-friendly patterns -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<circle class="animate-pulse" cx="5%" cy="15%" fill="currentColor" r="40"></circle>
+<circle class="animate-bounce-slow" cx="95%" cy="85%" fill="currentColor" r="60"></circle>
+<rect class="animate-rotate-slow" fill="currentColor" height="40" rx="10" width="40" x="80%" y="10%"></rect>
+<path class="animate-wiggle" d="M10,80 Q30,60 50,80 T90,80" fill="transparent" stroke="currentColor" stroke-width="8"></path>
+</svg>
+</div>
+<div class="relative z-10">
+<div class="mb-8 inline-block animate-bounce">
+<span class="material-symbols-outlined text-8xl text-on-primary-container" data-icon="celebration">celebration</span>
+</div>
+<h2 class="text-5xl md:text-8xl font-headline font-extrabold text-on-primary-container mb-8 leading-tight">Ready for the best <br/> summer ever?</h2>
+<p class="text-2xl text-on-primary-container/90 max-w-3xl mx-auto mb-16 font-bold italic">
+                    Limited spots available for our July and August cohorts! Grab your explorer hat and join the fun.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<button class="w-full md:w-auto bg-on-primary-container text-primary-container font-headline font-black px-16 py-8 rounded-full hover:scale-110 transition-transform duration-300 text-2xl shadow-[0_16px_0_rgb(34,27,0)] active:shadow-none active:translate-y-4">
+                        Join the Adventure!
+                    </button>
+<button class="w-full md:w-auto bg-white/40 backdrop-blur-md text-on-primary-container font-headline font-black px-16 py-8 rounded-full hover:bg-white/60 transition-all text-2xl border-4 border-on-primary-container/20">
+                        Request Brochure
+                    </button>
+</div>
+<div class="mt-16 flex items-center justify-center gap-6 text-on-primary-container/70 font-black text-lg">
+<span class="material-symbols-outlined text-3xl animate-pulse" data-icon="verified">verified</span>
+                    SAFETY CERTIFIED &amp; LICENSED CHILDCARE
+                    <span class="material-symbols-outlined text-3xl animate-pulse" data-icon="verified">verified</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[5rem] mt-20 bg-stone-100 border-t-8 border-primary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-10 py-24 max-w-7xl mx-auto">
+<div class="space-y-8">
+<div class="text-3xl font-black text-amber-600 font-headline italic flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-400" data-icon="star">star</span>
+                Little Stars
+            </div>
+<p class="text-lg text-stone-600 font-medium leading-relaxed">Nurturing curiosity, fostering creativity, and building bright futures through magical play!</p>
+<div class="flex gap-6">
+<a class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg hover:translate-y-[-8px] transition-all text-sky-500 border-2 border-sky-50" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="thumb_up">thumb_up</span>
+</a>
+<a class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg hover:translate-y-[-8px] transition-all text-rose-500 border-2 border-rose-50" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="favorite">favorite</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline font-black text-2xl text-sky-800 mb-8">Quick Links</h4>
+<ul class="space-y-5 font-bold text-lg">
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-3 inline-block transition-all" href="#">Home</a></li>
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-3 inline-block transition-all" href="#">Curriculum</a></li>
+<li><a class="text-amber-600 flex items-center gap-2" href="#">Summer Camp <span class="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span></a></li>
+<li><a class="text-stone-600 hover:text-sky-500 hover:translate-x-3 inline-block transition-all" href="#">Facilities</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-black text-2xl text-sky-800 mb-8">Programs</h4>
+<ul class="space-y-5 font-bold text-lg">
+<li><a class="text-stone-600 hover:text-rose-500 hover:translate-x-3 inline-block transition-all" href="#">Daycare</a></li>
+<li><a class="text-stone-600 hover:text-rose-500 hover:translate-x-3 inline-block transition-all" href="#">Preschool</a></li>
+<li><a class="text-stone-600 hover:text-rose-500 hover:translate-x-3 inline-block transition-all" href="#">After School</a></li>
+<li><a class="text-stone-600 hover:text-rose-500 hover:translate-x-3 inline-block transition-all" href="#">Music &amp; Art</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-black text-2xl text-sky-800 mb-8">Say Hello!</h4>
+<div class="space-y-6 text-stone-600 font-bold">
+<p class="flex items-center gap-4 text-lg">
+<span class="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</span>
+                    123 Sunshine Ave, Playtown
+                </p>
+<p class="flex items-center gap-4 text-lg">
+<span class="w-10 h-10 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="phone">phone</span>
+</span>
+                    (555) 123-PLAY
+                </p>
+<p class="flex items-center gap-4 text-lg">
+<span class="w-10 h-10 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</span>
+                    hello@littlestars.com
+                </p>
+</div>
+</div>
+</div>
+<div class="border-t-4 border-stone-200 py-10 px-10 text-center font-bold text-stone-500">
+        © 2024 Little Stars Playschool • Made with lots of ❤️ and ✨
+    </div>
+</footer>
+</body></html>

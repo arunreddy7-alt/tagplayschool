@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | Little Stars Playschool - Joyful Edition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;family=Bubblegum+Sans&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF6B6B", // Candy Red/Pink
+              "primary-container": "#FFE3E3",
+              "secondary": "#4ECDC4", // Minty Blue
+              "secondary-container": "#D1F2F0",
+              "tertiary": "#FFD93D", // Sunny Yellow
+              "tertiary-container": "#FFF4CC",
+              "surface": "#FFF9F0", // Warm Paper
+              "on-surface": "#45322E",
+              "on-surface-variant": "#7A6560",
+              "background": "#FFF9F0",
+            },
+            fontFamily: {
+              "headline": ["Bubblegum Sans", "Plus Jakarta Sans", "sans-serif"],
+              "body": ["Be Vietnam Pro", "sans-serif"],
+              "label": ["Be Vietnam Pro", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1.5rem", "lg": "2.5rem", "xl": "4rem", "full": "9999px"},
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'bounce-slow': 'bounce-slow 3s infinite',
+              'wiggle': 'wiggle 0.3s ease-in-out infinite',
+              'jiggle': 'jiggle 0.5s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0) translateX(0)' },
+                '50%': { transform: 'translateY(-20px) translateX(10px)' },
+              },
+              'bounce-slow': {
+                '0%, 100%': { transform: 'translateY(-5%)', 'animation-timing-function': 'cubic-bezier(0.8,0,1,1)' },
+                '50%': { transform: 'none', 'animation-timing-function': 'cubic-bezier(0,0,0.2,1)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              jiggle: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '25%': { transform: 'scale(1.05) rotate(-1deg)' },
+                '75%': { transform: 'scale(1.05) rotate(1deg)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 2.5rem;
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2.5rem;
+        }
+        
+        .cloud-shape {
+            border-radius: 60% 40% 70% 30% / 40% 50% 60% 40%;
+        }
+
+        .joyful-shadow {
+            box-shadow: 0 15px 0 -5px rgba(0,0,0,0.05);
+        }
+
+        .hover-jiggle:hover {
+            animation: jiggle 0.4s ease-in-out;
+        }
+
+        .storybook-border {
+            border: 4px solid currentColor;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-tertiary-container selection:text-on-surface">
+<!-- Floating Background Elements -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+<!-- Clouds -->
+<div class="absolute top-20 left-[10%] w-48 h-24 bg-white rounded-full opacity-60 blur-xl animate-float" style="animation-delay: 0s;"></div>
+<div class="absolute top-40 right-[15%] w-64 h-32 bg-white rounded-full opacity-60 blur-xl animate-float" style="animation-delay: -2s;"></div>
+<div class="absolute bottom-40 left-[5%] w-56 h-28 bg-white rounded-full opacity-60 blur-xl animate-float" style="animation-delay: -4s;"></div>
+<!-- Floating Icons -->
+<span class="material-symbols-outlined absolute top-1/4 left-1/4 text-tertiary text-6xl opacity-20 animate-bounce-slow">wb_sunny</span>
+<span class="material-symbols-outlined absolute top-3/4 right-1/4 text-primary text-5xl opacity-20 animate-float">favorite</span>
+<span class="material-symbols-outlined absolute top-1/2 left-10 text-secondary text-5xl opacity-20 animate-wiggle">auto_awesome</span>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-4 left-4 right-4 z-50 rounded-full bg-white/90 backdrop-blur-md border-4 border-tertiary-container shadow-xl">
+<div class="flex justify-between items-center w-full px-8 py-3 max-w-7xl mx-auto">
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-4xl group-hover:animate-wiggle">star</span>
+<span class="text-3xl font-black text-primary italic font-headline tracking-tighter">Little Stars</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-headline text-xl">
+<a class="text-on-surface hover:text-primary transition-all hover:scale-110" href="#">Home</a>
+<a class="text-on-surface hover:text-primary transition-all hover:scale-110" href="#">Programs</a>
+<a class="text-primary underline decoration-wavy decoration-tertiary underline-offset-8" href="#">Gallery</a>
+<a class="text-on-surface hover:text-primary transition-all hover:scale-110" href="#">Contact</a>
+</div>
+<button class="bg-tertiary text-on-surface px-8 py-3 rounded-full font-headline text-xl font-bold hover:scale-110 active:scale-95 transition-all shadow-[0_6px_0_#E5C12D] hover:translate-y-[-2px] active:translate-y-[4px] active:shadow-none">
+            Enroll!
+        </button>
+</div>
+</nav>
+<main class="pt-40 pb-20 px-6 max-w-7xl mx-auto relative">
+<!-- Header Section -->
+<header class="mb-20 flex flex-col items-center text-center">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary animate-bounce">rocket_launch</span>
+<span class="text-secondary font-headline text-2xl font-bold tracking-wide uppercase px-6 py-2 bg-secondary-container rounded-full border-2 border-secondary/20">Moments to Cherish</span>
+<span class="material-symbols-outlined text-secondary animate-bounce" style="animation-delay: 0.2s">palette</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-black text-on-surface leading-none mb-8">
+            Our Little Stars' <br/>
+<span class="text-primary italic inline-block hover:animate-wiggle cursor-default">Gallery of Wonder</span>
+</h1>
+<p class="max-w-2xl text-on-surface-variant text-xl leading-relaxed font-medium">
+            Jump into a world of sparkles and giggles! See all the fun adventures our little explorers have every single day.
+        </p>
+</header>
+<!-- Filter Tags -->
+<div class="flex flex-wrap justify-center gap-6 mb-20">
+<button class="px-10 py-4 rounded-full font-headline text-2xl font-bold bg-primary text-white shadow-[0_8px_0_#D64545] hover:translate-y-[-4px] active:translate-y-[4px] active:shadow-none transition-all">All Stories</button>
+<button class="px-10 py-4 rounded-full font-headline text-2xl font-bold bg-white text-secondary border-4 border-secondary/20 hover:bg-secondary-container transition-all hover-jiggle">Classrooms</button>
+<button class="px-10 py-4 rounded-full font-headline text-2xl font-bold bg-white text-tertiary border-4 border-tertiary/20 hover:bg-tertiary-container transition-all hover-jiggle">Activities</button>
+<button class="px-10 py-4 rounded-full font-headline text-2xl font-bold bg-white text-primary border-4 border-primary/20 hover:bg-primary-container transition-all hover-jiggle">Events</button>
+<button class="px-10 py-4 rounded-full font-headline text-2xl font-bold bg-white text-on-surface border-4 border-slate-200 hover:bg-slate-100 transition-all hover-jiggle">Playtime</button>
+</div>
+<!-- Masonry Grid -->
+<div class="masonry-grid">
+<!-- Item 1 -->
+<div class="masonry-item group cursor-pointer relative">
+<div class="bg-white rounded-[2.5rem] border-4 border-secondary/10 overflow-hidden joyful-shadow transition-all duration-500 group-hover:-rotate-2 group-hover:scale-[1.02] group-hover:border-secondary">
+<div class="relative overflow-hidden">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Children painting colorful pictures at small desks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA73hKUzS4ih_hH7ui0LPqtWq9nFMwn6eujz0KVTuqU-JbhpvxWsgrXkW-VtenRsE_ToCt99pPNGxOy_MEKwjZsHf94xG5dbe7xb1XtzTpmf-y4T4wf8B4DjPGDKtdsBN_lL9vpqzKjfKIh09s15CCKPyIQ4diS7N_CLKz4_vzIcYVY7avVbmc_8SOXfuKy_RPz-FowzcLIMrJXPGDZODlJkp4qaBMlF5-nKZCcGehCmneIZJbAHoOgLm0vkJ5nhmZmVtHbh90EgeUG"/>
+<div class="absolute top-4 right-4 bg-white/90 p-2 rounded-full group-hover:animate-bounce">
+<span class="material-symbols-outlined text-secondary">brush</span>
+</div>
+</div>
+<div class="p-8">
+<span class="text-secondary font-headline text-lg font-bold uppercase tracking-tighter">Activities</span>
+<h3 class="text-2xl font-headline font-bold mt-1 text-on-surface group-hover:text-secondary">Creative Expression Day</h3>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="masonry-item group cursor-pointer relative">
+<div class="bg-white rounded-[2.5rem] border-4 border-tertiary/10 overflow-hidden joyful-shadow transition-all duration-500 group-hover:rotate-2 group-hover:scale-[1.02] group-hover:border-tertiary">
+<div class="relative overflow-hidden">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Group of kids playing in a circle outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBCuBLpP-5q-mMOmdL07BA9n1dE2wITdsJvzQGqGPvOeJadMFnRsKzdwjIiqOZ24-ybjZBLgEitcmgRC7eFsZXJ8SCcPH5C4nlhhhThYDHwgaZEjtgbpz7Dq5TOYr5-kgFuVOr-PhGGTeK3CjOSg_TH19F9NAf60a8JwIln1Q2h1QbGPmaVC6-5VDPVgarhpIiOkAGnnKqxMqOtN7qS-BlYlJ5A5dIzpsGq6nkeZnKf2jLzlwq2oXiQWAeb3wGII07LNlcT8C_N-xe"/>
+<div class="absolute top-4 right-4 bg-white/90 p-2 rounded-full group-hover:animate-bounce">
+<span class="material-symbols-outlined text-tertiary">wb_sunny</span>
+</div>
+</div>
+<div class="p-8">
+<span class="text-tertiary font-headline text-lg font-bold uppercase tracking-tighter">Playtime</span>
+<h3 class="text-2xl font-headline font-bold mt-1 text-on-surface group-hover:text-tertiary">Sunlight Circle Time</h3>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="masonry-item group cursor-pointer relative">
+<div class="bg-white rounded-[2.5rem] border-4 border-primary/10 overflow-hidden joyful-shadow transition-all duration-500 group-hover:-rotate-1 group-hover:scale-[1.02] group-hover:border-primary">
+<div class="relative overflow-hidden">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Child looking through a microscope in science class" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9SJoozRkKOCOIDQbcaGY-C-RQak52DGgeNZd6Tb7zXzYoSHZ5iFwLzxyFSldBR4H_Ta_dvBXBaAaljzxafYGxaNdv47jpykWCd4j2pi2TBrUYQlt3DC9YKcV2sbpzVUTbVa_u9iyg63_9d0-xUiGaEBV9uSaxH_wV8rJonmSyzPGHVvRYbf9DurFvHpLLrZhmFbf7Di2-_Ck_XHM7HPmuQ36fUN7c2rr-bI8nxrnyEIaHjwDqY3s54GL3QICqzI2JrYPzbPvw2T-d"/>
+<div class="absolute top-4 right-4 bg-white/90 p-2 rounded-full group-hover:animate-bounce">
+<span class="material-symbols-outlined text-primary">microscope</span>
+</div>
+</div>
+<div class="p-8">
+<span class="text-primary font-headline text-lg font-bold uppercase tracking-tighter">Classrooms</span>
+<h3 class="text-2xl font-headline font-bold mt-1 text-on-surface group-hover:text-primary">Young Explorers Lab</h3>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="masonry-item group cursor-pointer relative">
+<div class="bg-white rounded-[2.5rem] border-4 border-secondary/10 overflow-hidden joyful-shadow transition-all duration-500 group-hover:rotate-1 group-hover:scale-[1.02] group-hover:border-secondary">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Brightly colored children's classroom with building blocks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqSzcfpG860aGC_LQmVNaZn2nevmO-EmQ2fanbFVkyFF8XUUs-TDAC8QOf49a7IMgProTvpvV9i6ED39vRQH7lf615GSn3NWrgvzTl7-wdBGzmbsXPgp5bTD1-TseLCke9BNaJXYZQbRFS5vKzEHxCXnjuM74auRtxwallvM4-qUugn31HaSGhQL9wHfbOs51_ifpj98OpBerC6-PtIB9xvVJ7B_Z0MMo2DN6uYrGR1_VQxhgiyl7Liav7ebTrL5ICbw11qbdW1D6R"/>
+<div class="p-8">
+<span class="text-secondary font-headline text-lg font-bold uppercase tracking-tighter">Events</span>
+<h3 class="text-2xl font-headline font-bold mt-1 text-on-surface">Annual Block Building Fest</h3>
+</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="masonry-item group cursor-pointer relative">
+<div class="bg-white rounded-[2.5rem] border-4 border-tertiary/10 overflow-hidden joyful-shadow transition-all duration-500 group-hover:-rotate-2 group-hover:scale-[1.02] group-hover:border-tertiary">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Children playing with sand in a colorful sandbox" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7NFSVCttroYlinMFpoxz5j4NCtt1-lRRIy9qmwyU9X9zn73jOOhcvdHK79tFvvqcCibNMiz9nvxxIMqe60seEJ5aEzIKfssioZHDY_SI7O0Jux2n9oVxwcSsn8zSZcT_6lb5bSwJr2L3CwF1aekn4QC-pYurrGsgt0FlWuozzZiWCdlezF9TsO9nDjLAlhuLeWKD5OaBwzvWcLhHOkx5fNapaX1ucO1RMN24tzCLra1uEDwFXRFeu_qx-svT7vAPhNSh1rU4689Z7"/>
+<div class="p-8">
+<span class="text-tertiary font-headline text-lg font-bold uppercase tracking-tighter">Playtime</span>
+<h3 class="text-2xl font-headline font-bold mt-1 text-on-surface">Sand Castle Architects</h3>
+</div>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="masonry-item group cursor-pointer relative">
+<div class="bg-white rounded-[2.5rem] border-4 border-primary/10 overflow-hidden joyful-shadow transition-all duration-500 group-hover:rotate-2 group-hover:scale-[1.02] group-hover:border-primary">
+<img class="w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Teacher reading a book to a group of toddlers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMQTPLsc-S35VVrb8EzfEhiusLjTjRRaRp3bRLnbn2RAQ1LqkkMGvUMWQEa2UYoslTb0UwAej_tV0qKTECaTWRjWAQuYXPB8yJSAPpBy7Yj3ewZd0wwCCfRVabNg70nHafnOS9pJJt5ShgIu0ocKb-cdx31Q07485eSt6YARW8r-_nSGXHgcqPyXZJ_YxWQZHcUemGRddrL81cMub_9PcSRpDY8ka-TeiSmozOzcANal4Wc_qt9XgcqGKtLXe93sIcm_dGrWfdn_S6"/>
+<div class="p-8">
+<span class="text-primary font-headline text-lg font-bold uppercase tracking-tighter">Classrooms</span>
+<h3 class="text-2xl font-headline font-bold mt-1 text-on-surface">Magical Storytelling Hour</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<section class="mt-40 relative bg-secondary-container rounded-[4rem] border-8 border-white overflow-hidden p-12 md:p-24 text-center joyful-shadow">
+<!-- Floating Balloons Background -->
+<div class="absolute top-10 right-10 flex flex-col items-center animate-float" style="animation-delay: 0s;">
+<div class="w-12 h-16 bg-primary rounded-full mb-0.5"></div>
+<div class="w-0.5 h-12 bg-on-surface/20"></div>
+</div>
+<div class="absolute top-20 left-10 flex flex-col items-center animate-float" style="animation-delay: -3s;">
+<div class="w-10 h-14 bg-tertiary rounded-full mb-0.5"></div>
+<div class="w-0.5 h-10 bg-on-surface/20"></div>
+</div>
+<h2 class="text-5xl md:text-7xl font-headline font-black text-secondary mb-8 tracking-tight">Want to see it in person?</h2>
+<p class="text-on-surface font-medium text-2xl max-w-2xl mx-auto mb-12">
+            Come visit our colorful world! Meet the teachers and see where the magic happens.
+        </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<button class="bg-primary text-white px-12 py-5 rounded-full font-headline text-2xl font-bold hover:scale-110 active:scale-95 transition-all shadow-[0_8px_0_#D64545] hover:translate-y-[-4px] active:translate-y-[4px] active:shadow-none">Schedule a Tour!</button>
+<button class="bg-white text-secondary px-12 py-5 rounded-full font-headline text-2xl font-bold hover:scale-110 active:scale-95 transition-all border-4 border-secondary/20 shadow-[0_8px_0_#D1F2F0] hover:translate-y-[-4px] active:translate-y-[4px] active:shadow-none">Get Brochure</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[5rem] mt-20 bg-white border-t-8 border-tertiary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-10 py-20 max-w-7xl mx-auto font-body text-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">star</span>
+<span class="text-3xl font-black text-primary font-headline">Little Stars</span>
+</div>
+<p class="text-on-surface-variant font-medium mb-8">Nurturing curiosity and creativity in every child since 2012. Join our happy family!</p>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary hover:animate-wiggle cursor-pointer">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-primary hover:animate-wiggle cursor-pointer">
+<span class="material-symbols-outlined">photo_camera</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-tertiary hover:animate-wiggle cursor-pointer">
+<span class="material-symbols-outlined">alternate_email</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-headline font-bold text-2xl text-secondary mb-8 uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-4 font-medium">
+<li><a class="text-on-surface-variant hover:text-primary hover:translate-x-2 transition-all block" href="#">Home</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:translate-x-2 transition-all block" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:translate-x-2 transition-all block" href="#">Curriculum</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:translate-x-2 transition-all block" href="#">Facilities</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold text-2xl text-tertiary mb-8 uppercase tracking-wider">Services</h4>
+<ul class="space-y-4 font-medium">
+<li><a class="text-on-surface-variant hover:text-primary hover:translate-x-2 transition-all block" href="#">Daycare</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:translate-x-2 transition-all block" href="#">Summer Camp</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:translate-x-2 transition-all block" href="#">Pre-School</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:translate-x-2 transition-all block" href="#">After School</a></li>
+</ul>
+</div>
+<div class="bg-tertiary-container/30 p-8 rounded-[3rem] border-4 border-dashed border-tertiary/30">
+<h4 class="font-headline font-bold text-2xl text-primary mb-6 uppercase tracking-wider">Contact</h4>
+<div class="space-y-4 font-medium text-on-surface">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">location_on</span> 123 Sparkle Lane</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">call</span> +1 (555) STARS</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">mail</span> hello@littlestars.com</p>
+</div>
+</div>
+</div>
+<div class="py-10 text-center font-headline text-xl text-on-surface-variant/60">
+        Made with ❤️ for all the little dreamers. © 2024 Little Stars.
+    </div>
+</footer>
+</body></html>

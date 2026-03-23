@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Little Stars Joyful Edition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Gaegu:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#FFD1DC", // Cotton Candy Pink
+              "inverse-on-surface": "#f2f1e5",
+              "secondary-container": "#BAEAFF", // Sky Blue
+              "surface-variant": "#e4e3d7",
+              "on-tertiary-fixed-variant": "#6b3741",
+              "on-secondary-fixed-variant": "#004d62",
+              "on-secondary": "#ffffff",
+              "on-surface": "#2D3436",
+              "tertiary-fixed-dim": "#fcb3be",
+              "on-tertiary-container": "#6b3741",
+              "primary-fixed": "#FFEB3B", // Sunny Yellow
+              "secondary-fixed-dim": "#89d0ed",
+              "surface-dim": "#dbdbcf",
+              "on-surface-variant": "#636E72",
+              "on-background": "#2D3436",
+              "on-secondary-container": "#0984E3",
+              "inverse-surface": "#303129",
+              "primary-fixed-dim": "#fdd835",
+              "outline-variant": "#c6c6c6",
+              "secondary-fixed": "#baeaff",
+              "on-primary-fixed": "#221b00",
+              "inverse-primary": "#e9c400",
+              "surface-bright": "#FFFDF0",
+              "on-primary-container": "#D63031",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e9e9dd",
+              "primary": "#FF7675", // Strawberry Red
+              "surface-container-highest": "#e4e3d7",
+              "on-primary-fixed-variant": "#544600",
+              "tertiary-fixed": "#ffd9de",
+              "on-secondary-fixed": "#001f29",
+              "error": "#d63031",
+              "background": "#FFFDF0",
+              "surface-container-low": "#FEF9E7",
+              "on-error": "#ffffff",
+              "tertiary-container": "#D1F2EB", // Mint Green
+              "on-tertiary-fixed": "#117A65",
+              "outline": "#777777",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#FD79A8", // Bright Pink
+              "secondary": "#0984E3", // Bright Blue
+              "surface-container": "#FDF2E9",
+              "surface-tint": "#FF7675",
+              "surface": "#FFFDF0",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"],
+              "storybook": ["Gaegu"]
+            },
+            borderRadius: {"DEFAULT": "1.5rem", "lg": "3rem", "xl": "4rem", "full": "9999px"},
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'bounce-soft': 'bounce-soft 3s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0) translateX(0)' },
+                '50%': { transform: 'translateY(-20px) translateX(10px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              'bounce-soft': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-joyful-gradient {
+        background: linear-gradient(135deg, #FFFDF0 0%, #FFEB3B 100%);
+      }
+      .cloud {
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+      }
+      .cloud:after, .cloud:before {
+        content: '';
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+      }
+      .jiggle-hover:hover {
+        animation: wiggle 0.5s ease-in-out infinite;
+      }
+      .pop-hover:hover {
+        transform: scale(1.1);
+      }
+      .blob {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden selection:bg-primary-container">
+<!-- Floating Decorative Elements -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="cloud w-32 h-12 top-20 left-[10%] animate-float opacity-40"></div>
+<div class="cloud w-40 h-16 top-40 right-[15%] animate-float opacity-30" style="animation-delay: 2s"></div>
+<div class="absolute top-[60%] left-[5%] animate-bounce-soft opacity-20">
+<span class="material-symbols-outlined text-[80px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="absolute top-[20%] right-[8%] animate-wiggle opacity-10">
+<span class="material-symbols-outlined text-[150px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">WB_Sunny</span>
+</div>
+<div class="absolute bottom-20 right-[5%] animate-float opacity-20">
+<span class="material-symbols-outlined text-[100px] text-tertiary" style="font-variation-settings: 'FILL' 1;">icecream</span>
+</div>
+</div>
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 px-4 pt-4">
+<div class="bg-white/90 backdrop-blur-xl shadow-[0_15px_35px_rgba(255,118,117,0.15)] rounded-full max-w-7xl mx-auto border-4 border-primary-container/30">
+<div class="flex justify-between items-center w-full px-8 py-3">
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="text-3xl animate-wiggle inline-block">⭐</span>
+<span class="text-2xl font-black text-primary italic font-headline tracking-tighter group-hover:text-secondary transition-colors">Little Stars</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-on-surface-variant hover:text-primary transition-all font-headline font-extrabold tracking-tight hover:scale-110 active:scale-95" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-headline font-extrabold tracking-tight hover:scale-110 active:scale-95" href="#">Programs</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-all font-headline font-extrabold tracking-tight hover:scale-110 active:scale-95" href="#">Gallery</a>
+<a class="text-primary border-b-4 border-primary-container pb-1 font-headline font-extrabold tracking-tight" href="#">Contact</a>
+</div>
+<button class="bg-primary text-white font-headline font-black px-8 py-3 rounded-full hover:scale-110 active:scale-90 transition-all duration-300 shadow-lg shadow-primary/20 jiggle-hover">
+                Enroll Now!
+            </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto relative z-10">
+<!-- Hero Section -->
+<header class="mb-20 text-center md:text-left relative">
+<div class="inline-block bg-tertiary-container text-on-tertiary-fixed px-6 py-2 rounded-full font-black text-sm mb-6 animate-bounce-soft">
+            ✨ SAY HELLO TO US!
+        </div>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tight text-on-surface mb-8 leading-[1.1]">
+            Let's Start a <br/>
+<span class="text-secondary relative">
+                Conversation
+                <svg class="absolute -bottom-4 left-0 w-full" height="12" viewbox="0 0 200 12" width="200" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 10 Q 50 0 100 10 T 200 10" fill="transparent" stroke="#FF7675" stroke-width="4"></path>
+</svg>
+</span>
+</h1>
+<p class="text-on-surface-variant text-2xl max-w-2xl leading-relaxed font-medium">
+            Whether you have questions about our <span class="text-primary font-bold">magical curriculum</span> or want to schedule a visit, we're here to help!
+        </p>
+<!-- Animated Sun Illustration -->
+<div class="absolute -top-16 -right-16 hidden lg:block animate-pulse-slow">
+<div class="relative w-40 h-40">
+<span class="material-symbols-outlined text-[160px] text-primary-fixed" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+<div class="absolute inset-0 flex items-center justify-center pt-4">
+<span class="text-4xl">😊</span>
+</div>
+</div>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Contact Form Card -->
+<div class="lg:col-span-7 bg-white rounded-[3rem] p-10 md:p-14 shadow-[0_30px_60px_rgba(255,118,117,0.12)] border-8 border-secondary-container relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary-container/40 rounded-full blur-2xl"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-tertiary-container/40 rounded-full blur-2xl"></div>
+<h2 class="font-headline text-4xl font-black mb-10 text-on-surface flex items-center gap-4">
+                Send us a message
+                <span class="text-3xl animate-bounce">✉️</span>
+</h2>
+<form class="space-y-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-3">
+<label class="font-headline font-black text-primary text-lg ml-2">Your Name</label>
+<input class="w-full bg-surface-container-low border-4 border-transparent rounded-2xl px-6 py-5 focus:ring-0 focus:border-secondary-container transition-all text-lg font-medium" placeholder="Super Mom or Dad's Name" type="text"/>
+</div>
+<div class="space-y-3">
+<label class="font-headline font-black text-secondary text-lg ml-2">Email Address</label>
+<input class="w-full bg-surface-container-low border-4 border-transparent rounded-2xl px-6 py-5 focus:ring-0 focus:border-primary-container transition-all text-lg font-medium" placeholder="hello@magic.com" type="email"/>
+</div>
+</div>
+<div class="space-y-3">
+<label class="font-headline font-black text-tertiary text-lg ml-2">Phone Number</label>
+<input class="w-full bg-surface-container-low border-4 border-transparent rounded-2xl px-6 py-5 focus:ring-0 focus:border-tertiary-container transition-all text-lg font-medium" placeholder="+1 (555) STARS" type="tel"/>
+</div>
+<div class="space-y-3">
+<label class="font-headline font-black text-on-surface text-lg ml-2">Your Message</label>
+<textarea class="w-full bg-surface-container-low border-4 border-transparent rounded-2xl px-6 py-5 focus:ring-0 focus:border-primary-container transition-all text-lg font-medium" placeholder="What's your little star dreaming of today?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-headline font-black py-6 rounded-full hover:scale-[1.03] active:scale-95 transition-all text-2xl flex justify-center items-center gap-4 shadow-xl shadow-primary/30 group/btn overflow-hidden relative" type="submit">
+<span class="relative z-10">Send Magic Sparkles!</span>
+<span class="material-symbols-outlined text-3xl group-hover/btn:translate-x-12 group-hover/btn:-translate-y-12 transition-all duration-500 relative z-10" data-icon="auto_awesome">auto_awesome</span>
+<div class="absolute inset-0 bg-secondary translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+</button>
+</form>
+</div>
+<!-- Sidebar Info -->
+<div class="lg:col-span-5 space-y-10">
+<!-- Address Card -->
+<div class="bg-secondary-container/40 border-4 border-secondary-container rounded-[2.5rem] p-8 hover:translate-y-[-8px] transition-all group cursor-default">
+<div class="flex items-start gap-6">
+<div class="bg-secondary w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg animate-bounce-soft">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<h3 class="font-headline font-black text-2xl mb-2 text-on-secondary-container">Visit Our Galaxy 🚀</h3>
+<p class="text-on-secondary-container font-bold text-lg leading-snug">
+                            123 Starlight Avenue,<br/>
+                            Meadowbrook Heights, NY
+                        </p>
+</div>
+</div>
+</div>
+<!-- Call Card -->
+<div class="bg-primary-container/40 border-4 border-primary-container rounded-[2.5rem] p-8 hover:translate-y-[-8px] transition-all group cursor-default">
+<div class="flex items-start gap-6">
+<div class="bg-primary w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg animate-wiggle">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<div>
+<h3 class="font-headline font-black text-2xl mb-2 text-on-primary-container">Give us a Ring 📞</h3>
+<p class="text-on-primary-container font-black text-2xl">(555) LITTLE-STAR</p>
+<p class="text-on-primary-container/70 font-bold mt-1 uppercase text-sm tracking-widest">Open for fun: Mon-Fri</p>
+</div>
+</div>
+</div>
+<!-- Email Card -->
+<div class="bg-tertiary-container/40 border-4 border-tertiary-container rounded-[2.5rem] p-8 hover:translate-y-[-8px] transition-all group cursor-default">
+<div class="flex items-start gap-6">
+<div class="bg-tertiary w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg jiggle-hover">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<h3 class="font-headline font-black text-2xl mb-2 text-on-tertiary-container">Write to Us 💌</h3>
+<p class="text-on-tertiary-container font-black text-xl hover:text-primary cursor-pointer transition-colors">hello@littlestars.edu</p>
+</div>
+</div>
+</div>
+<!-- Playful Illustration -->
+<div class="pt-4 flex justify-center">
+<div class="animate-float">
+<span class="text-8xl">🎈</span>
+</div>
+<div class="animate-float" style="animation-delay: 1s">
+<span class="text-7xl">🎈</span>
+</div>
+<div class="animate-float" style="animation-delay: 0.5s">
+<span class="text-8xl">🎈</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Map Section -->
+<section class="mt-28 relative">
+<div class="w-full h-[550px] rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white relative group ring-8 ring-secondary-container/20">
+<img alt="Map showing Little Stars location" class="w-full h-full object-cover grayscale-[0.2] contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKJa4FaqVHDBO_4WHpKPd5BYCRSyYxLg61Yziy5y0-aYQROj5QbzRQGLadacgwKRfxyFpwWTkQL_p-dPMvOLs8EK73H2T97E1UENv1abQ19nmoOTErvjoslsPvAo6KSXbZ0bwp8u7rmwbu6eZtoIMDDGGooGBahrrvwmVbkZEQc1KVkdmnev_EJpXU8FEQRQUCprukvQOC5vKiyg-Si6QVUoI8aTeokCeZ7Csa7CyN_k2g_d_feEpydC3XoBbJ9ok1oKrFsarxPW8R"/>
+<!-- Map Overlay -->
+<div class="absolute bottom-10 left-10 bg-white p-8 rounded-[3rem] shadow-2xl max-w-sm border-4 border-primary-container animate-bounce-soft">
+<div class="flex items-center gap-4 mb-3">
+<div class="w-6 h-6 rounded-full bg-primary animate-ping"></div>
+<span class="font-headline font-black text-2xl text-on-surface">We are here! 📍</span>
+</div>
+<p class="text-lg text-on-surface-variant mb-6 font-medium">Just a hop, skip, and a jump away from the park!</p>
+<button class="bg-secondary text-white w-full py-4 rounded-full font-headline font-black text-lg hover:scale-105 transition-transform shadow-lg shadow-secondary/20">
+                    Get Directions 🚗
+                </button>
+</div>
+</div>
+<!-- Floating Rocket -->
+<div class="absolute -bottom-20 -right-10 hidden md:block animate-float">
+<span class="material-symbols-outlined text-[200px] text-primary opacity-30 rotate-45" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[5rem] mt-32 bg-secondary-container/20 border-t-8 border-secondary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-10 py-24 max-w-7xl mx-auto">
+<!-- Brand Section -->
+<div class="space-y-8">
+<div class="flex items-center gap-2">
+<span class="text-4xl animate-wiggle inline-block">⭐</span>
+<span class="text-3xl font-black text-primary font-headline">Little Stars</span>
+</div>
+<p class="text-on-surface-variant font-medium text-xl leading-relaxed">
+                Creating <span class="text-secondary font-bold">big memories</span> for the smallest hearts since 2012. Join our playful family!
+            </p>
+<div class="flex gap-6">
+<a class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center hover:scale-125 hover:-rotate-12 transition-all shadow-md text-primary" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="brand_awareness">brand_awareness</span>
+</a>
+<a class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center hover:scale-125 hover:rotate-12 transition-all shadow-md text-secondary" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="camera_alt">camera_alt</span>
+</a>
+<a class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center hover:scale-125 hover:-rotate-12 transition-all shadow-md text-tertiary" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="groups">groups</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="font-headline font-black text-2xl text-secondary mb-8">Explore 🗺️</h4>
+<ul class="space-y-5">
+<li><a class="text-on-surface-variant text-lg font-bold hover:text-primary hover:pl-2 transition-all" href="#">Sweet Home</a></li>
+<li><a class="text-on-surface-variant text-lg font-bold hover:text-primary hover:pl-2 transition-all" href="#">About Our Team</a></li>
+<li><a class="text-on-surface-variant text-lg font-bold hover:text-primary hover:pl-2 transition-all" href="#">Daily Magic</a></li>
+<li><a class="text-on-surface-variant text-lg font-bold hover:text-primary hover:pl-2 transition-all" href="#">Our Castle</a></li>
+</ul>
+</div>
+<!-- Programs -->
+<div>
+<h4 class="font-headline font-black text-2xl text-tertiary mb-8">Programs 🎨</h4>
+<ul class="space-y-5">
+<li><a class="text-on-surface-variant text-lg font-bold hover:text-primary hover:pl-2 transition-all" href="#">Happy Daycare</a></li>
+<li><a class="text-on-surface-variant text-lg font-bold hover:text-primary hover:pl-2 transition-all" href="#">Summer Fun Camp</a></li>
+<li><a class="text-on-surface-variant text-lg font-bold hover:text-primary hover:pl-2 transition-all" href="#">Little Preschool</a></li>
+<li><a class="text-on-surface-variant text-lg font-bold hover:text-primary hover:pl-2 transition-all" href="#">Secret Policy</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h4 class="font-headline font-black text-2xl text-primary mb-8">Star Updates 📬</h4>
+<p class="text-on-surface-variant text-lg mb-6 font-medium">Join our mailing list for sparkly news!</p>
+<div class="relative group">
+<input class="w-full bg-white border-4 border-primary-container rounded-full px-8 py-5 text-lg font-medium focus:ring-0 focus:border-primary transition-all pr-20" placeholder="Parent's email" type="email"/>
+<button class="absolute right-2 top-2 bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center hover:scale-110 active:scale-90 transition-transform shadow-lg">
+<span class="material-symbols-outlined text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="mt-6 flex justify-end">
+<span class="text-5xl animate-bounce-soft">🦋</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-10 pb-16">
+<div class="border-t-4 border-secondary-container/30 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-on-surface-variant/70 font-bold text-lg">© 2024 Little Stars. Made with lots of ❤️</p>
+<div class="flex gap-10 font-bold text-lg text-on-surface-variant/70">
+<a class="hover:text-primary transition-colors" href="#">Terms of Play</a>
+<a class="hover:text-primary transition-colors" href="#">Cookie Treats</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

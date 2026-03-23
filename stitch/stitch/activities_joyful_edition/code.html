@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joyful Activities | Little Stars Playschool</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;family=Fredoka:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#FFD93D",
+              "secondary-container": "#91C8E4",
+              "tertiary-container": "#FF9B9B",
+              "surface": "#FFF9DE",
+              "primary": "#FF8400",
+              "on-surface": "#4F200D",
+              "on-surface-variant": "#744331",
+              "background": "#FFF9DE",
+            },
+            fontFamily: {
+              "headline": ["Fredoka", "Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Fredoka"]
+            },
+            borderRadius: {"DEFAULT": "1.5rem", "lg": "2.5rem", "xl": "4rem", "full": "9999px"},
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-soft': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .storybook-border {
+        border: 4px solid #4F200D;
+        box-shadow: 8px 8px 0px #4F200D;
+      }
+      .cloud-shape {
+        clip-path: path('M25 60 A20 20 0 0 1 25 20 A20 20 0 0 1 65 20 A20 20 0 0 1 105 20 A20 20 0 0 1 105 60 Z');
+      }
+      .jiggle-hover:hover {
+        animation: wiggle 0.3s ease-in-out infinite;
+      }
+      .pop-hover:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 12px 12px 0px #4F200D;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Floating Background Elements -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute top-20 left-[10%] animate-float opacity-20">
+<span class="material-symbols-outlined text-8xl text-primary-container">cloud</span>
+</div>
+<div class="absolute top-40 right-[15%] animate-float opacity-20" style="animation-delay: -2s">
+<span class="material-symbols-outlined text-9xl text-secondary-container">cloud</span>
+</div>
+<div class="absolute bottom-20 left-[5%] animate-bounce-slow opacity-10">
+<span class="material-symbols-outlined text-7xl text-tertiary-container">extension</span>
+</div>
+<div class="absolute top-1/2 right-10 animate-wiggle opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">bedroom_baby</span>
+</div>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-50 rounded-full bg-white/90 backdrop-blur-md border-4 border-on-surface shadow-[6px_6px_0px_#4F200D]">
+<div class="flex justify-between items-center w-full px-8 py-3">
+<div class="text-2xl font-black text-primary font-headline flex items-center gap-2">
+<span class="material-symbols-outlined animate-wiggle">star</span>
+                Little Stars
+            </div>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-8 items-center font-headline font-bold">
+<a class="text-on-surface hover:text-primary transition-all hover:scale-110" href="#">Home</a>
+<a class="text-primary border-b-4 border-primary pb-1" href="#">Programs</a>
+<a class="text-on-surface hover:text-primary transition-all hover:scale-110" href="#">Gallery</a>
+<a class="text-on-surface hover:text-primary transition-all hover:scale-110" href="#">Contact</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-bold border-2 border-on-surface shadow-[4px_4px_0px_#4F200D] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#4F200D] transition-all active:translate-y-[2px] active:shadow-none">
+                Enroll!
+            </button>
+</div>
+</nav>
+<main class="relative pt-40 pb-20 px-6 max-w-7xl mx-auto z-10">
+<!-- Hero Section -->
+<header class="relative mb-24 text-center">
+<div class="inline-block px-6 py-2 bg-tertiary-container text-on-surface border-2 border-on-surface rounded-full text-sm font-black mb-8 animate-bounce-slow uppercase tracking-widest shadow-[4px_4px_0px_#4F200D]">
+                Let's Play Together! 🎈
+            </div>
+<h1 class="font-headline text-5xl md:text-8xl font-black text-on-surface tracking-tight leading-tight mb-8">
+                Where Fun Meets <br/>
+<span class="text-primary relative inline-block">
+                    Learning
+                    <svg class="absolute -bottom-4 left-0 w-full h-4 text-primary-container" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0 10 Q25 0 50 10 T100 10" fill="none" stroke="currentColor" stroke-width="4"></path>
+</svg>
+</span>
+</h1>
+<p class="text-on-surface-variant text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-medium">
+                Step into a world of magic! Our activities are like chapters in a storybook where your little star is the hero of every adventure.
+            </p>
+</header>
+<!-- Activities Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+<!-- Art & Craft -->
+<div class="md:col-span-8 group bg-white rounded-3xl p-8 storybook-border transition-all duration-300 pop-hover">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="w-full md:w-1/2 rounded-2xl overflow-hidden h-72 border-4 border-on-surface">
+<img alt="Children messy painting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW3JYFgbUtkAkyFzBZCH6bwciPB7olJuvrewg0vtbC7J5W_suje_zRrENJhZx1NxgkZCtdayWFRAR7QlQewyHANhmZ1wL7xZGXOkXv8sNc4IWTxB7su_59Z48FfSpwGYfwC_3aOWJisrWkYBmVHjnhh2AD0Wfd1E_XbmYL_NUsYRUWrjnEF_ZsZj7wNRKI7uZTo8Fp3k2aD5JwLGizEkO0TRWL2lrtKBDJv8jjrmtLFBqIzAr_OA9Oiq4A8U9FpXVs3YKYJwuyCNgn"/>
+</div>
+<div class="md:w-1/2">
+<div class="w-20 h-20 bg-primary-container flex items-center justify-center rounded-full border-4 border-on-surface mb-6 animate-wiggle shadow-[4px_4px_0px_#4F200D]">
+<span class="material-symbols-outlined text-on-surface text-4xl">brush</span>
+</div>
+<h3 class="font-headline text-4xl font-black mb-4">Art &amp; Craft 🎨</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6 font-medium">Splash, splat, and smile! We explore messy colors and sticky glue to build wonderful masterpieces together.</p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-secondary-container rounded-full border-2 border-on-surface text-sm font-bold">Magic Colors</span>
+<span class="px-4 py-2 bg-tertiary-container rounded-full border-2 border-on-surface text-sm font-bold">Sticky Fun</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Music & Dance -->
+<div class="md:col-span-4 group bg-secondary-container rounded-3xl p-8 storybook-border transition-all duration-300 pop-hover flex flex-col justify-between h-full">
+<div>
+<div class="w-16 h-16 bg-white flex items-center justify-center rounded-2xl border-4 border-on-surface mb-6 jiggle-hover">
+<span class="material-symbols-outlined text-primary text-4xl">music_note</span>
+</div>
+<h3 class="font-headline text-4xl font-black mb-4">Groove! 🎶</h3>
+<p class="text-on-surface font-medium leading-relaxed">Shake, wiggle, and roll! We learn to move our feet to the happy beats of our favorite tunes.</p>
+</div>
+<div class="mt-8 rounded-2xl overflow-hidden h-56 border-4 border-on-surface bg-white">
+<img alt="Kids dancing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp7WxP-9GXDlOGYKZRboqwFoTddmyw4LbpIQfe9am6d8mEBKGTm2Tmc67DnhkZi1hkS58CZHurnLGLsHbI4PYpQElyzUSkqA87TMEBsQj-xuA2rfhAHBCbT2Lp0kPrtQILYyAitqGaz-zpFxWU3f5b9b-mor_OxmK9T0m0UeozOPSzTj2WJdd5dUAqLwx-izt6rylfUv3sJii3d9nZwyaNwXDiP10Rc4g1T2N9BNaW5AAs1GEV-z3EsXCT468FjQemIcZpcCwi83zG"/>
+</div>
+</div>
+<!-- Storytelling -->
+<div class="md:col-span-5 group bg-tertiary-container rounded-3xl p-8 storybook-border transition-all duration-300 pop-hover relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-20">
+<span class="material-symbols-outlined text-[10rem] animate-float">menu_book</span>
+</div>
+<div class="w-16 h-16 bg-white flex items-center justify-center rounded-full border-4 border-on-surface mb-6 relative">
+<span class="material-symbols-outlined text-primary text-4xl">auto_stories</span>
+</div>
+<h3 class="font-headline text-4xl font-black mb-4 relative">Once Upon a Time...</h3>
+<p class="text-on-surface font-medium leading-relaxed mb-6 relative">Travel to far-off lands! Our magic puppets bring books to life with funny voices and exciting tales.</p>
+<div class="flex items-center gap-2 font-bold animate-pulse-soft relative">
+<span class="material-symbols-outlined">favorite</span> 
+                    Every Tuesday &amp; Thursday
+                </div>
+</div>
+<!-- Outdoor Play -->
+<div class="md:col-span-7 group bg-white rounded-3xl p-8 storybook-border transition-all duration-300 pop-hover">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="flex-1">
+<div class="w-16 h-16 bg-primary-container flex items-center justify-center rounded-full border-4 border-on-surface mb-6 animate-wiggle">
+<span class="material-symbols-outlined text-on-surface text-4xl">sunny</span>
+</div>
+<h3 class="font-headline text-4xl font-black mb-4">Sun &amp; Fun ☀️</h3>
+<p class="text-on-surface-variant font-medium leading-relaxed mb-6">Running in the grass and digging in the sand! Our playground is where the biggest adventures happen.</p>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 bg-surface rounded-full border-2 border-on-surface flex items-center justify-center mb-1">
+<span class="material-symbols-outlined">nature</span>
+</div>
+<span class="text-xs font-black uppercase">Trees</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 bg-surface rounded-full border-2 border-on-surface flex items-center justify-center mb-1">
+<span class="material-symbols-outlined">scuba_diving</span>
+</div>
+<span class="text-xs font-black uppercase">Sand</span>
+</div>
+</div>
+</div>
+<div class="md:w-2/5 rounded-2xl overflow-hidden border-4 border-on-surface h-48 md:h-auto">
+<img alt="Toddler outside" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB63qHY4nAMszcj6fRe_iQR6SFdbi4jdsMJ94k6sY175aRhAnd75ytfXK5TG0uLE-8ksRhpJP6S3qwakgut22anRJQeoCgXSnNcZOPXl_GtXl2_nbw5xLccY2YgR0ZUq72pzj-vOpX4dvtXxccu779qOhKFRwKWhC-kWdjifU4lbUzPtpqqYWGgoVieWoeLExHwZG-eiufY-acA4_Sg48hteT3zCi6M-dWmrwLU1zC_Vl5UQYmanfsGtM4ChQZcB6yoi1eYkOrTuS1H"/>
+</div>
+</div>
+</div>
+<!-- Group Games -->
+<div class="md:col-span-12 group bg-on-surface rounded-[3rem] p-12 shadow-[12px_12px_0px_#FFD93D] transition-all duration-300 flex flex-col md:flex-row items-center gap-12 border-4 border-on-surface">
+<div class="text-white md:w-1/2">
+<div class="w-20 h-20 bg-primary flex items-center justify-center rounded-3xl mb-8 rotate-3 jiggle-hover">
+<span class="material-symbols-outlined text-white text-5xl">diversity_2</span>
+</div>
+<h3 class="font-headline text-5xl font-black mb-6">Team Little Stars! 🤝</h3>
+<p class="text-secondary-container text-xl leading-relaxed font-medium">Learning to be a great friend! We solve puzzles together and cheer for each other in every game we play.</p>
+<button class="mt-10 px-8 py-4 bg-primary text-white font-black rounded-full border-4 border-white shadow-[6px_6px_0px_rgba(255,255,255,0.3)] hover:translate-y-[-4px] hover:shadow-[10px_10px_0px_rgba(255,255,255,0.4)] transition-all">
+                        Join the Team!
+                    </button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:w-1/2">
+<div class="aspect-square rounded-3xl overflow-hidden border-4 border-white rotate-[-3deg] hover:rotate-0 transition-transform">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPKj7awk-JmFspO6_oFkBDapeKXFpj3tKzaRsqcBNQtA_yaO83zK3JQQ8jCba61zJP3kXi74zJFqyFfImiWdSXgAABgF7CAWnN99yHbwghAxZiciDTDquu5a5B2FKHnhac066ClwcKLoJde1E35z9bWBX_BZ6o-XrAD-fBbgf_76m7VM1zb0XWVZWQ_Cs3rSfRTdN2Dcvmupu_XPJwh4dhJ38vtorqkwx28XHOQBiC-SeTw6x_0GQprGhef29uAbWB72qy9sn6HlWB"/>
+</div>
+<div class="aspect-square rounded-3xl overflow-hidden border-4 border-white translate-y-6 rotate-[3deg] hover:rotate-0 transition-transform">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtEQ3m56ULE5sBJ7v4Ormn1sn0xki7ZTcDY-15Ah4yZr7XgTk49UAMRa_dzMy-SUFbtMj3_7eK6sdMGtb0h--XkvN9RKTT6G79fSYpSlnJGs-RK0-6E0nDCkCIVR5FA2NzxJAP4efBrBfH1EoBQFTyfNh6vnp_ZA2BjFMXNE0Bs_HkvvaB2fvsX4m0-9lrcPAfhnHLqqGJmsi4N5Owd3-aptL-2-_RfxgMoVoZRdrL9sgWpdZL0l374ii8m957yxydZP9VkzMREf30"/>
+</div>
+<div class="aspect-square rounded-3xl overflow-hidden border-4 border-white hidden md:block rotate-[-2deg] hover:rotate-0 transition-transform">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByZlIcGbGsVa-dJ6l923LY9A1hL16EKnfeu7MbxBmLiOlMSYV46vjhelpsbMxv0MlpO2Xl8VAbMk7ssDl9Zn-AXtHa_35w50i_GJAjXAF0VWHNSBQTL1pg-8E-Mdqm89OdBAXOubj36GfLin_zTzSJv_buQxvPzX5aj2AZbc-1n4Ju2P-AAZ6uXwVb9LIj7CNOKs7NtQRxYz3HGffViZIWLYivzVmh8BBY95cSPAv0WCSUnEDZQGzpaU7SZHA_J_Fc66gLthrH04Du"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full relative mt-32 bg-white border-t-8 border-on-surface">
+<!-- Playful Curvy Edge (CSS-only approximation) -->
+<div class="absolute -top-12 left-0 w-full h-12 overflow-hidden flex justify-around items-end">
+<div class="w-24 h-24 bg-white rounded-full border-t-8 border-on-surface translate-y-12"></div>
+<div class="w-24 h-24 bg-white rounded-full border-t-8 border-on-surface translate-y-12"></div>
+<div class="w-24 h-24 bg-white rounded-full border-t-8 border-on-surface translate-y-12"></div>
+<div class="w-24 h-24 bg-white rounded-full border-t-8 border-on-surface translate-y-12"></div>
+<div class="w-24 h-24 bg-white rounded-full border-t-8 border-on-surface translate-y-12"></div>
+<div class="w-24 h-24 bg-white rounded-full border-t-8 border-on-surface translate-y-12"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-10 pt-24 pb-16 max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="text-3xl font-black text-primary font-headline italic">Little Stars</div>
+<p class="text-on-surface-variant font-medium leading-relaxed">Where every day is a new adventure and every child is the star of the show! ✨</p>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full border-4 border-on-surface bg-primary-container flex items-center justify-center jiggle-hover cursor-pointer">
+<span class="material-symbols-outlined text-on-surface">rocket_launch</span>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-on-surface bg-secondary-container flex items-center justify-center jiggle-hover cursor-pointer">
+<span class="material-symbols-outlined text-on-surface">celebration</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 font-headline text-lg">
+<h4 class="font-black text-primary">Quick Jumps</h4>
+<a class="text-on-surface hover:text-primary transition-all font-bold" href="#">Home Room</a>
+<a class="text-on-surface hover:text-primary transition-all font-bold" href="#">About Us</a>
+<a class="text-on-surface hover:text-primary transition-all font-bold" href="#">Our Magic</a>
+<a class="text-on-surface hover:text-primary transition-all font-bold" href="#">Visit Us</a>
+</div>
+<div class="flex flex-col gap-4 font-headline text-lg">
+<h4 class="font-black text-primary">Programs</h4>
+<a class="text-on-surface hover:text-primary transition-all font-bold" href="#">Little Babies</a>
+<a class="text-on-surface hover:text-primary transition-all font-bold" href="#">Toddler Tales</a>
+<a class="text-on-surface hover:text-primary transition-all font-bold" href="#">Fun Camps</a>
+<a class="text-on-surface hover:text-primary transition-all font-bold" href="#">After School</a>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-black text-primary font-headline text-lg">Get Happy Mail!</h4>
+<div class="relative group">
+<input class="w-full bg-surface rounded-2xl px-5 py-4 border-4 border-on-surface focus:outline-none focus:ring-4 focus:ring-primary/20 transition-all font-bold" placeholder="Your best email!" type="email"/>
+<button class="absolute right-2 top-2 bg-primary text-white w-12 h-12 rounded-xl border-2 border-on-surface shadow-[2px_2px_0px_#4F200D] flex items-center justify-center hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<p class="text-on-surface-variant font-bold text-sm">© 2024 Little Stars. Let's play forever! 🍭</p>
+</div>
+</div>
+</footer>
+</body></html>
